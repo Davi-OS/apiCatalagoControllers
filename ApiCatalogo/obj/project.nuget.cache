@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "0kruGkHTfik6iaWEL7cEeu0oLOT0jzxu+ZmFRjxVdGwdqSoR4huJXWTSkmw6vMvblq3foKiPwGZgkihl2vyxBg==",
+  "dgSpecHash": "IHw8xySX7XLNvKkYzVKpFfHcUZxChFvrZXI5mr1v3TcdAdxkQYKY8iAPNm5FQ1m/GfNHh32Y+ifvZPCEB5NzrQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\davio\\OneDrive\\Área de Trabalho\\ApiCatalago\\ApiCatalogo\\ApiCatalogo.csproj",
+  "projectFilePath": "C:\\Users\\davio\\OneDrive\\Área de Trabalho\\ApiCatalago\\ApiCatalogo.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\davio\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\davio\\.nuget\\packages\\microsoft.entityframeworkcore\\7.0.2\\microsoft.entityframeworkcore.7.0.2.nupkg.sha512",

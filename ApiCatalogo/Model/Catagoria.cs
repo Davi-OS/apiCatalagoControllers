@@ -21,7 +21,7 @@ public class Categoria
     [StringLength(300)]
     public string? ImagemUrl { get; set; }
 
-    [JsonIgnore]
+    
     //propiedade de navegação responsavel por unir as tabelas Categoria e Produtos no EF
     public ICollection<Produto>? Produtos { get; set; }
 

@@ -1,0 +1,16 @@
+C:\Users\davio\OneDrive\Área de Trabalho\ApiCatalago\obj\Release\net8.0\PubTmp\Out\ApiCatalogo.exe
+C:\Users\davio\OneDrive\Área de Trabalho\ApiCatalago\obj\Release\net8.0\PubTmp\Out\appsettings.Development.json
+C:\Users\davio\OneDrive\Área de Trabalho\ApiCatalago\obj\Release\net8.0\PubTmp\Out\appsettings.json
+C:\Users\davio\OneDrive\Área de Trabalho\ApiCatalago\obj\Release\net8.0\PubTmp\Out\ApiCatalogo.dll
+C:\Users\davio\OneDrive\Área de Trabalho\ApiCatalago\obj\Release\net8.0\PubTmp\Out\ApiCatalogo.runtimeconfig.json
+C:\Users\davio\OneDrive\Área de Trabalho\ApiCatalago\obj\Release\net8.0\PubTmp\Out\ApiCatalogo.pdb
+C:\Users\davio\OneDrive\Área de Trabalho\ApiCatalago\obj\Release\net8.0\PubTmp\Out\Microsoft.EntityFrameworkCore.dll
+C:\Users\davio\OneDrive\Área de Trabalho\ApiCatalago\obj\Release\net8.0\PubTmp\Out\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\davio\OneDrive\Área de Trabalho\ApiCatalago\obj\Release\net8.0\PubTmp\Out\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\davio\OneDrive\Área de Trabalho\ApiCatalago\obj\Release\net8.0\PubTmp\Out\Microsoft.OpenApi.dll
+C:\Users\davio\OneDrive\Área de Trabalho\ApiCatalago\obj\Release\net8.0\PubTmp\Out\MySqlConnector.dll
+C:\Users\davio\OneDrive\Área de Trabalho\ApiCatalago\obj\Release\net8.0\PubTmp\Out\Pomelo.EntityFrameworkCore.MySql.dll
+C:\Users\davio\OneDrive\Área de Trabalho\ApiCatalago\obj\Release\net8.0\PubTmp\Out\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\davio\OneDrive\Área de Trabalho\ApiCatalago\obj\Release\net8.0\PubTmp\Out\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\davio\OneDrive\Área de Trabalho\ApiCatalago\obj\Release\net8.0\PubTmp\Out\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\davio\OneDrive\Área de Trabalho\ApiCatalago\obj\Release\net8.0\PubTmp\Out\ApiCatalogo.deps.json

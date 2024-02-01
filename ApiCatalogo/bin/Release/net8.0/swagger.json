@@ -1,0 +1,365 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "ApiCatalogo, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
+    "version": "1.0"
+  },
+  "paths": {
+    "/Categoria/produtos": {
+      "get": {
+        "tags": [
+          "Categoria"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Categoria"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/Categoria": {
+      "get": {
+        "tags": [
+          "Categoria"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Categoria"
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Categoria"
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/Categoria"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/Categoria/{id}, Name = Obter Categoria": {
+      "get": {
+        "tags": [
+          "Categoria"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "$ref": "#/definitions/Categoria"
+            }
+          }
+        }
+      }
+    },
+    "/Categoria/{id}": {
+      "put": {
+        "tags": [
+          "Categoria"
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/Categoria"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Categoria"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/Produtos": {
+      "get": {
+        "tags": [
+          "Produtos"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Produto"
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Produtos"
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/Produto"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/Produtos/{id}, Name = Obter Produto": {
+      "get": {
+        "tags": [
+          "Produtos"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "$ref": "#/definitions/Produto"
+            }
+          }
+        }
+      }
+    },
+    "/Produtos/{id}": {
+      "put": {
+        "tags": [
+          "Produtos"
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/Produto"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Produtos"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "Categoria": {
+      "required": [
+        "imagemUrl",
+        "nome"
+      ],
+      "type": "object",
+      "properties": {
+        "categoriaId": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "nome": {
+          "maxLength": 80,
+          "minLength": 0,
+          "type": "string"
+        },
+        "imagemUrl": {
+          "maxLength": 300,
+          "minLength": 0,
+          "type": "string"
+        },
+        "produtos": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Produto"
+          }
+        }
+      }
+    },
+    "Produto": {
+      "required": [
+        "descricao",
+        "imagemUrl",
+        "nome",
+        "preco"
+      ],
+      "type": "object",
+      "properties": {
+        "produtoId": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "nome": {
+          "maxLength": 80,
+          "minLength": 0,
+          "type": "string"
+        },
+        "descricao": {
+          "maxLength": 300,
+          "minLength": 0,
+          "type": "string"
+        },
+        "preco": {
+          "format": "double",
+          "type": "number"
+        },
+        "imagemUrl": {
+          "maxLength": 300,
+          "minLength": 0,
+          "type": "string"
+        },
+        "estoque": {
+          "format": "float",
+          "type": "number"
+        },
+        "dataCadastro": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "categoriaId": {
+          "format": "int32",
+          "type": "integer"
+        }
+      }
+    }
+  }
+}

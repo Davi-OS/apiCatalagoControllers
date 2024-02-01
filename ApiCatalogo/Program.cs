@@ -14,19 +14,18 @@ builder.Services.AddControllers().AddJsonOptions(options =>
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-string myStringConnection = builder.Configuration.GetConnectionString("Local");
+string myStringConnection = builder.Configuration.GetConnectionString("Azure");
 builder.Services.AddDbContext<ApiCatalogoContext>(options =>
 options.UseMySql(myStringConnection, ServerVersion.AutoDetect(myStringConnection)));
 var app = builder.Build();
 
 
-// Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
-{
+
+
     app.UseExceptionHandler("/Error");
     app.UseSwagger();
-app.UseSwaggerUI();
-}
+    app.UseSwaggerUI();
+
 
 app.UseHttpsRedirection();
 
