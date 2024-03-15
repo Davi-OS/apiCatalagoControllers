@@ -19,12 +19,12 @@ namespace ApiCatalogo.Controllers
         }
 
         [HttpGet("produtos")]
-        public ActionResult<IEnumerable<Categoria>> GetCategoriasProdutos()
+        public async  Task<ActionResult<IEnumerable<Categoria>>> GetCategoriasProdutos()
         {
             try
             {
 
-                return _context.Categorias.Include(p => p.Produtos).AsNoTracking().Take(10).ToList();
+                return await _context.Categorias.Include(p => p.Produtos).AsNoTracking().Take(10).ToListAsync();
 
             }
             catch (Exception)
@@ -35,11 +35,11 @@ namespace ApiCatalogo.Controllers
         }
 
         [HttpGet]
-        public ActionResult<IEnumerable<Categoria>> GetCategorias()
+        public async Task<ActionResult<IEnumerable<Categoria>>> GetCategorias()
         {
             try
             {
-                var categorias = _context.Categorias.AsNoTracking().ToList();
+                var categorias = await _context.Categorias.AsNoTracking().ToListAsync();
                 if (categorias.Any())
                 {
                     return categorias;
@@ -53,12 +53,12 @@ namespace ApiCatalogo.Controllers
             }
         }
 
-        [HttpGet("{id:int}, Name = Obter Categoria")]
-        public ActionResult<Categoria> Get(int id)
+        [HttpGet("{id:int}", Name = "ObterCategoria")]
+        public async Task<ActionResult<Categoria>> Get(int id)
         {
             try
             {
-                var categoria = _context.Categorias.FirstOrDefault(categoria => categoria.CategoriaId == id);
+                var categoria = await _context.Categorias.FirstOrDefaultAsync(categoria => categoria.CategoriaId == id);
                 if (categoria == null)
                 {
                     return NotFound("Categoria não encontrada");
@@ -86,7 +86,7 @@ namespace ApiCatalogo.Controllers
 
                 _context.Categorias.Add(categoria);
                 _context.SaveChanges();
-                return new CreatedAtRouteResult("Obter Categoria",
+                return new CreatedAtRouteResult("ObterCategoria",
                     new { id = categoria.CategoriaId }, categoria);
             }
             catch (Exception)

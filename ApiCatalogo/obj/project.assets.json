@@ -1457,11 +1457,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\davio\\OneDrive\\Área de Trabalho\\ApiCatalago\\ApiCatalogo.csproj",
+      "projectUniqueName": "C:\\Users\\davio\\OneDrive\\Área de Trabalho\\ApiCatalago\\apiCatalagoControllers\\ApiCatalogo\\ApiCatalogo.csproj",
       "projectName": "ApiCatalogo",
-      "projectPath": "C:\\Users\\davio\\OneDrive\\Área de Trabalho\\ApiCatalago\\ApiCatalogo.csproj",
+      "projectPath": "C:\\Users\\davio\\OneDrive\\Área de Trabalho\\ApiCatalago\\apiCatalagoControllers\\ApiCatalogo\\ApiCatalogo.csproj",
       "packagesPath": "C:\\Users\\davio\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\davio\\OneDrive\\Área de Trabalho\\ApiCatalago\\obj\\",
+      "outputPath": "C:\\Users\\davio\\OneDrive\\Área de Trabalho\\ApiCatalago\\apiCatalagoControllers\\ApiCatalogo\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

@@ -2,6 +2,7 @@
 using ApiCatalogo.Context;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.ModelBinding;
 using Microsoft.EntityFrameworkCore;
 
 namespace ApiCatalogo.Controllers
@@ -17,17 +18,12 @@ namespace ApiCatalogo.Controllers
         }
 
         [HttpGet]
-        public ActionResult<IEnumerable<Produto>> GetProduto()
+        public async Task<ActionResult<IEnumerable<Produto>>> GetProduto()
         {
             try
             {
-                var produtos = _context.Produtos.AsNoTracking().ToList();
-                if (produtos.Count == 0)
-                {
-                    return NotFound("Produtos não encontrados");
-                }
-                return produtos;
-
+                return await _context.Produtos.AsNoTracking().ToListAsync();
+               
             }
             catch (Exception)
             {
@@ -35,13 +31,14 @@ namespace ApiCatalogo.Controllers
                 return StatusCode(StatusCodes.Status500InternalServerError, "Ocorreu um problema");
             }
         }
-
-        [HttpGet("{id:int}, Name = Obter Produto")]
-        public ActionResult<Produto> Get(int id)
+        // restrição de rota onde o valor de id tem que ser maior que 0
+        [HttpGet("{id:int:min(1)}", Name ="ObterProduto")]
+        public async Task<ActionResult<Produto>> Get(int id, [BindRequired] string nome)
         {
             try
             {
-                var produto = _context.Produtos.Where(produto => produto.ProdutoId == id).FirstOrDefault();
+                var nomeProduto = nome;
+                var produto = await _context.Produtos.AsNoTracking().FirstOrDefaultAsync(produto => produto.ProdutoId == id);
                 if (produto == null)
                 {
                     return NotFound("Produtos não encontrados");
@@ -69,8 +66,7 @@ namespace ApiCatalogo.Controllers
                 _context.Produtos.Add(produto);
                 _context.SaveChanges();
 
-                return new CreatedAtRouteResult("Obter Produto", new
-                { id = produto.ProdutoId }, produto);
+                return new CreatedAtRouteResult("ObterProduto", new { id = produto.ProdutoId }, produto);
 
             }
             catch (Exception)

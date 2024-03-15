@@ -1,7 +1,8 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\Model"
   ],
-  "SelectedNode": "\\ApiCatalogo.csproj",
+  "SelectedNode": "\\Model\\Catagoria.cs",
   "PreviewInSolutionExplorer": false
 }

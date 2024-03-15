@@ -14,15 +14,17 @@ public class Categoria
     public int CategoriaId { get; set; }
     //
     [Required]
-    [StringLength(80)]
+    [StringLength(80, ErrorMessage = "O nome da categoria deve ter no maximo {1} e no minimo {2}",
+        MinimumLength = 5)]
     public string? Nome { get; set; }
 
     [Required]
-    [StringLength(300)]
+    [StringLength(300, MinimumLength = 10)]
     public string? ImagemUrl { get; set; }
 
-    
+
     //propiedade de navegação responsavel por unir as tabelas Categoria e Produtos no EF
+    [JsonIgnore]
     public ICollection<Produto>? Produtos { get; set; }
 
     public Categoria()
