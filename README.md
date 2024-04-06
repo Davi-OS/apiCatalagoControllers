@@ -15,7 +15,7 @@ Bem-vindo ao repositório do projeto de gestão de catálogo de produtos com uma
 ## Acesssando a Aplicação
 Acesse o link para conferir e interagir com os endpoints da API:
    
-https://apicatalogoprod.azurewebsites.net/swagger/index.html](https://apicatalogoprod.azurewebsites.net/swagger/index.html
+https://apicatalogoprod.azurewebsites.net/swagger/index.html
 
 ## Rodando Localmente
 
